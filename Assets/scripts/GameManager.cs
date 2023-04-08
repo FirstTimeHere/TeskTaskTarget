@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int score { get; private set; }
+    public float score { get; private set; }
 
-    public void GetScore(Scores scores)
+    private SpawnBullet bullet;
+
+    private void Awake()
     {
-        SetScore(this.score + scores.points);
+        bullet = FindObjectOfType<SpawnBullet>();
     }
-    private void SetScore(int score)
+    public bool GetCheck()
+    {
+        return bullet.singleShoot;        
+    }
+    public void GetScore(Scores scores, float multiplier=1)
+    {
+        SetScore(this.score + (scores.points * multiplier));
+    }
+    private void SetScore(float score)
     {
         this.score = score;
     }

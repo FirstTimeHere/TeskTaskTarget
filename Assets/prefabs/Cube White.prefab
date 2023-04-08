@@ -113,6 +113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 70
   destroyTime: 4
+  gameManager: {fileID: 0}
 --- !u!54 &6276172646006995881
 Rigidbody:
   m_ObjectHideFlags: 0

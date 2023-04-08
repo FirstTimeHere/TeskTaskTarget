@@ -936,10 +936,11 @@ MonoBehaviour:
   bullet: {fileID: 6892703868558056017, guid: 01529281ade9f734592380978d5a30de, type: 3}
   cam: {fileID: 931400655}
   spawn: {fileID: 82166150}
-  SingleShoot: 1
-  maxAmmo: 5
-  shootForce: 1500
+  maxAmmo: 2
+  shrapnel: 5
+  shootForce: 10
   spread: 0
+  shotgunSpread: 1
 --- !u!1 &1386439026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1349,7 +1350,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 119
+      value: 247
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}

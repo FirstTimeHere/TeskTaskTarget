@@ -58,12 +58,12 @@
   <ItemGroup>
     <Compile Include="Assets\scripts\Scores.cs" />
     <Compile Include="Assets\scripts\GameManager.cs" />
+    <Compile Include="Assets\scripts\TextScore.cs" />
     <Compile Include="Assets\scripts\BulletLifeTime.cs" />
     <Compile Include="Assets\scripts\SpawnBullet.cs" />
     <Compile Include="Assets\scripts\CrossHair.cs" />
     <Compile Include="Assets\scripts\createcube.cs" />
     <Compile Include="Assets\scripts\SpawnPlayer.cs" />
-    <Compile Include="Assets\scripts\TextScore.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
