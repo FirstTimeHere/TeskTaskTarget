@@ -348,13 +348,15 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/scripts/BulletLifeTime.cs"
+"Assets/scripts/CameraBullet.cs"
 "Assets/scripts/createcube.cs"
 "Assets/scripts/CrossHair.cs"
 "Assets/scripts/GameManager.cs"
+"Assets/scripts/LevelUp.cs"
 "Assets/scripts/Scores.cs"
 "Assets/scripts/SpawnBullet.cs"
-"Assets/scripts/SpawnPlayer.cs"
 "Assets/scripts/TextScore.cs"
+"Assets/scripts/VisibleCanvas.cs"
 -langversion:9.0
 
 /deterministic

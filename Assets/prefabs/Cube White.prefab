@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4063918657908807936}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7, y: 6, z: 15}
+  m_LocalPosition: {x: 7, y: 6, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -113,6 +113,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 70
   destroyTime: 4
+  multiplierSingleShotAndSpeedOne: 0.5
+  multiplierFiveShotAndSpeedOne: 0.1
+  multiplierFiveShotAndSpeedSecond: 0.2
   gameManager: {fileID: 0}
 --- !u!54 &6276172646006995881
 Rigidbody:

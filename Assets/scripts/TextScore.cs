@@ -9,13 +9,13 @@ public class TextScore : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     [SerializeField] private Text scoreText;
     [SerializeField] private StringBuilder builder; // для "оптимизации"
-    private int lenghtBuilder = 10;
+
+    private int lenghtBuilder = 5;
 
     private void Start()
     {
         scoreText = this.gameObject.GetComponent<Text>();
-        builder = new StringBuilder(lenghtBuilder);
-        
+        builder = new StringBuilder(lenghtBuilder);        
     }
     void Update()
     {

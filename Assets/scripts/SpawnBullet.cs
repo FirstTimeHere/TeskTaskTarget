@@ -7,17 +7,13 @@ public class SpawnBullet : MonoBehaviour
     [SerializeField] private GameObject bullet;
     [SerializeField] private Camera cam;
     [SerializeField] private Transform spawn;
-
     // режимы стрельбы
-    public bool singleShoot { get; private set; }  = true;    //передать значение через делегат                  // одиночными и для коэфицента  
-    private bool secondShoot;                                 
+    public bool singleShoot { get; private set; }  = true;    //передать значение через делегат                  // одиночными и для коэфицента                                   
 
     [SerializeField] private int maxAmmo = 3;                            // количество дополнительных патронов
     private int maxAmmoInClip = 1;                        // емкость магазина
     private int gunAmmo = 0;
     [SerializeField] private int shrapnel = 0;
-
-
 
     private bool canShoot = true;                        // триггер
     [SerializeField] private float shootForce;
@@ -28,25 +24,21 @@ public class SpawnBullet : MonoBehaviour
     {
         gunAmmo = maxAmmoInClip;                        // кладем в магазин патроны в колистве емкости магазина
     }
-
-    private void Update()
+    private void FixedUpdate()
     {
+        //лучше через fixed
         if (Input.GetKey(KeyCode.B))
         {
-            SingleOrNotShoot();
+            singleShoot = !singleShoot;
         }
+    }
+    private void Update()
+    {
         // при нажатии на левую кнопку мыши и если нам разрешено стрелять
         if (Input.GetMouseButtonDown(0)  && canShoot)
         {
             Shoot();
         }
-    }
-
-    private bool SingleOrNotShoot()
-    {
-        secondShoot = singleShoot ? false : true;
-        singleShoot = secondShoot;
-        return secondShoot;
     }
     /// <summary>
     /// Создаем метод, в нем создаем пулю, куда она летит
@@ -70,6 +62,7 @@ public class SpawnBullet : MonoBehaviour
         {
             gunAmmo--;
         }
+
         if (gunAmmo < 1)
         {
             // выключаем триггер (то есть стрелять уже нельзя)

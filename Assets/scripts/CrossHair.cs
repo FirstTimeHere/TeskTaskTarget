@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class CrossHair : MonoBehaviour
 {
-
     [SerializeField] private RectTransform Crosshair;
     [SerializeField] private float sizeState;
     [SerializeField] private float scoreState;
@@ -18,7 +17,6 @@ public class CrossHair : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        
         if (isScored) 
         {
             sizeCurrent = Mathf.Lerp(sizeCurrent, scoreState, Time.deltaTime * speed);
@@ -27,6 +25,7 @@ public class CrossHair : MonoBehaviour
         {
             sizeCurrent = Mathf.Lerp(sizeCurrent, sizeState, Time.deltaTime * speed);
         }
+
         Crosshair.sizeDelta=new Vector2(sizeCurrent, sizeCurrent);
     }
    private bool isScored

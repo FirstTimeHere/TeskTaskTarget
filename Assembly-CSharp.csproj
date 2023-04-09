@@ -63,7 +63,9 @@
     <Compile Include="Assets\scripts\SpawnBullet.cs" />
     <Compile Include="Assets\scripts\CrossHair.cs" />
     <Compile Include="Assets\scripts\createcube.cs" />
-    <Compile Include="Assets\scripts\SpawnPlayer.cs" />
+    <Compile Include="Assets\scripts\CameraBullet.cs" />
+    <Compile Include="Assets\scripts\LevelUp.cs" />
+    <Compile Include="Assets\scripts\VisibleCanvas.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

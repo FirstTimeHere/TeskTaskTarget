@@ -7,12 +7,14 @@ using UnityEngine;
 public class Scores : MonoBehaviour
 {
     private Rigidbody rb;
-     //public SpawnBullet Bullet; //передать значение через делегат
 
     public float points = 70;
     [SerializeField] private float destroyTime = 3f;
-    private float multiplier = 0.1f;
-    private bool someBool;
+    [SerializeField] private float multiplierSingleShotAndSpeedOne = 0.5f;
+    [SerializeField] private float multiplierFiveShotAndSpeedOne = 0.1f;
+    [SerializeField] private float multiplierFiveShotAndSpeedSecond = 0.2f;
+
+    private bool singleCheck;
 
     [SerializeField, HideInInspector] GameManager gameManager;
 
@@ -26,19 +28,17 @@ public class Scores : MonoBehaviour
         rb.isKinematic = true;
         rb.mass = 10.0f;
     }
-    /// <summary>
-    /// сделать здесь коэффициент, или откзаться писать его здесь через виртуальные методы
-    /// </summary>
 
     protected virtual void GetPoint()
     {
         //вроде как то можно закинуть findobject в массив, но у меня не получилось
-        someBool = gameManager.GetCheck();
-        if (!someBool)
+        singleCheck = gameManager.GetCheck();
+        if (!singleCheck)
         {
-            gameManager.GetScore(this, multiplier);
+            gameManager.GetScore(this, multiplierSingleShotAndSpeedOne);
         }
-        FindObjectOfType<GameManager>().GetScore(this);
+        gameManager.GetScore(this, multiplierFiveShotAndSpeedOne);
+        //gameManager.GetScore(this);//multi second speed = 1
         rb.isKinematic = false;  
     }
 

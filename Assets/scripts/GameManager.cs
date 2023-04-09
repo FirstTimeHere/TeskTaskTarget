@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    /// <summary>
+    /// В данном случае этот скрипт побольшей части связующий
+    /// </summary>
     public float score { get; private set; }
 
     private SpawnBullet bullet;
@@ -12,7 +15,7 @@ public class GameManager : MonoBehaviour
     {
         bullet = FindObjectOfType<SpawnBullet>();
     }
-    public bool GetCheck()
+    public bool GetCheck() 
     {
         return bullet.singleShoot;        
     }
